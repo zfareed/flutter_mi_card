@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal.shade200,
+        backgroundColor: Colors.teal.shade400,
       appBar: AppBar(
         title: Text('MI Card'),
         backgroundColor: Colors.teal,
@@ -27,36 +27,26 @@ class MyApp extends StatelessWidget {
               ),
               Text('Zain Fareed',style: TextStyle(color: Colors.black,fontSize: 30.0,fontStyle: FontStyle.normal)),
               Text('Flutter Developer', style: TextStyle(color: Colors.black, fontSize: 15.0)),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
-                padding: EdgeInsets.all(10.0),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
                 color: Colors.white,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.phone,
-                    color: Colors.teal,),
-                    SizedBox(
-                      width: 10.0),
-                    Text('+92 303 7046121', style: TextStyle(color: Colors.teal),)
-                  ],
+                child: ListTile(
+                  leading: Icon(Icons.phone,
+                      color: Colors.teal),
+                  title: Text('+92 303 7046121', style: TextStyle(color: Colors.teal)
+                  )
+                ),
+                ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(Icons.email,
+                    color: Colors.teal),
+                  title:Text('zfareed@gmail.com', style: TextStyle(color: Colors.teal)
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.email,
-                      color: Colors.teal,),
-                    SizedBox(
-                        width: 10.0),
-                    Text('zfareed@gmail.com', style: TextStyle(color: Colors.teal),)
-                  ],
-                ),
-              )
             ],
           ),
         ),
@@ -65,3 +55,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
